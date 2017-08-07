@@ -14,11 +14,14 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       expect(apples).to.be.an('array'); // Begin here something is wrong, fix it.
     });
     // write a test to check the correct length of the apples array.
-    // write a test to check to see if the apples array contains 'Red Delicious'.
-    it('should be an array', () => {
+    it('should have length of 4', () => {
       const apples = cases.apples;
       expect(apples).to.have.lengthOf(4);
-      expect(apples[1]).to.equal('Red Delicious');
+    });
+    // write a test to check to see if the apples array contains 'Red Delicious'.
+    it('should contain `Red Delicious`', () => {
+      const apples = cases.apples;
+      expect(apples).to.include('Red Delicious');
     });
   });
 
